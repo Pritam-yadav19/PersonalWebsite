@@ -20,6 +20,8 @@
 .det{
     font-size: 25px;
     border: none;
+    display:flex;
+    width: 100%;
 }
 .det:hover{
     color: white;
