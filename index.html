@@ -1,7 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./styles/myweb.css">
+        <style>
+        .catchy-words {
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed for spacing */
+        }
+
+        .catchy-words h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #007BFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Set the background color for the body */
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd; /* Add a horizontal line separator */
+            margin: 20px auto;
+        }
+        .container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin: 20px auto;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .det {
+            display: block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #007BFF; /* Set the background color for the buttons */
+            color: #fff; /* Set the text color for the buttons */
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .det:hover {
+            background-color: #0056b3; /* Change the background color on hover */
+        }
+
+        .proj {
+            background-color: #28a745; /* Customize the project button color */
+        }
+
+        .qualify {
+            background-color: #ffc107; /* Customize the interests button color */
+        }
+        </style>
         <script>
             window.addEventListener("click",function(){
                 var links=document.getElementsByTagName("a");
@@ -9,29 +68,29 @@
                 links[i].setAttribute("target","_blank");
             }
             })
-            
         </script>
     </head>
-    <body>
-        <img src="./pic/pic.jpeg" class="pics"/>
+    <body>        
+        <div class="catchy-words">
+            <h1>Welcome to my Web Wonderland</h1>
+        </div>
         <hr/>
-        
         <div class="container">
-            <a class="det" href="/aboutme.html" style="text-decoration: none;">
+            <a class="det" href="/aboutme.html">
             <button class="det">
                 About me
             </button>
             </a>
-            <a class="det" href="/skills.html" style="text-decoration: none;">
+            <a class="det" href="/skills.html">
             <button class="det">
                 Skills
             </button>
             </a>
-            <a class="det proj" href="https://pritam-yadav19.github.io/PersonalWebsite/projects.html" style="text-decoration: none;">
+            <a class="det proj" href="https://pritam-yadav19.github.io/PersonalWebsite/projects.html">
             <button class="det proj">
                 Projects
             </button></a>
-            <a class="det qualify" href="/interests.html" style="text-decoration: none;">
+            <a class="det qualify" href="/interests.html">
             <button class="det qualify">
                 Interests
             </button>
@@ -39,3 +98,5 @@
         </div>
     </body>
 </html>
+
+
