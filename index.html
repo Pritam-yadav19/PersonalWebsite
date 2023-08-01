@@ -2,24 +2,40 @@
 <html>
     <head>
         <link rel="stylesheet" href="./styles/myweb.css">
+        <script>
+            window.addEventListener("click",function(){
+                var links=document.getElementsByTagName("a");
+                for(let i=0;i<links.length;i++){
+                links[i].setAttribute("target","_blank");
+            }
+            })
+            
+        </script>
     </head>
     <body>
         <img src="./pic/pic.jpeg" class="pics"/>
         <hr/>
         
         <div class="container">
+            <a class="det" href="file:///C:/Users/prita/htmldemo/aboutme.html">
             <button class="det">
                 About me
             </button>
+            </a>
+            <a class="det" href="file:///C:/Users/prita/htmldemo/skills.html">
             <button class="det">
                 Skills
             </button>
-            <a class="det proj" href="https://pritam-yadav19.github.io/PersonalWebsite/projects.html" target="_blank" style="text-decoration: none;"><button class="det proj">
+            </a>
+            <a class="det proj" href="https://pritam-yadav19.github.io/PersonalWebsite/projects.html" style="text-decoration: none;">
+            <button class="det proj">
                 Projects
             </button></a>
+            <a class="det qualify" href="file:///C:/Users/prita/htmldemo/interests.html">
             <button class="det qualify">
-                Qualifications
+                Interests
             </button>
+            </a>
         </div>
     </body>
 </html>
