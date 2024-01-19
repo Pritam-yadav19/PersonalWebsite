@@ -1,96 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-        .catchy-words {
-            text-align: center;
-            margin-top: 50px; /* Adjust as needed for spacing */
-        }
-
-        .catchy-words h1 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #007BFF;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Button</title>
+    <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8; /* Set the background color for the body */
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd; /* Add a horizontal line separator */
-            margin: 20px auto;
-        }
-        .container {
-            display: grid;
-            justify-content: center;
+            display: flex;
             align-items: center;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            margin: 20px auto;
-        }
-        a {
-            text-decoration: none;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            overflow: hidden;
         }
 
-        .det {
-            display: block;
-            margin: 10px;
+        .button-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
             padding: 15px 30px;
-            background-color: #007BFF; /* Set the background color for the buttons */
-            color: #fff; /* Set the text color for the buttons */
-            border: none;
-            border-radius: 8px;
             font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.2s ease-in-out;
-        }
-        .det:hover {
-            background-color: #0056b3; /* Change the background color on hover */
+            color: #fff;
+            background-color: #3498db;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            animation: pulse 2s infinite;
         }
 
-        </style>
-        <script>
-            window.addEventListener("click",function(){
-                var links=document.getElementsByTagName("a");
-                for(let i=0;i<links.length;i++){
-                links[i].setAttribute("target","_blank");
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            button {
+                font-size: 16px;
+                padding: 12px 24px;
             }
-            })
-        </script>
-    </head>
-    <body>        
-        <div class="catchy-words">
-            <h1>Welcome to my Web Wonderland</h1>
-        </div>
-        <a href="https://pritam-yadav19.github.io/Portfolio_Own/"><button>go to site</button></a>
-        <hr/>
-        <div class="container">
-            <a class="det" href="/aboutme.html">
-            <button class="det">
-                About me
-            </button>
-            </a>
-            <a class="det" href="/skills.html">
-            <button class="det">
-                Skills
-            </button>
-            </a>
-            <a class="det proj" href="https://pritam-yadav19.github.io/PersonalWebsite/projects.html">
-            <button class="det proj">
-                Projects
-            </button></a>
-            <a class="det qualify" href="/interests.html">
-            <button class="det qualify">
-                Interests
-            </button>
-            </a>
-        </div>
-    </body>
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="window.location.href='https://pritam-yadav19.github.io/Portfolio_Own/'">Click Me</button>
+    </div>
+</body>
 </html>
-
-
